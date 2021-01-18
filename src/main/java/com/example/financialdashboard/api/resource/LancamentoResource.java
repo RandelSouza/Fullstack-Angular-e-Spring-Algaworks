@@ -21,6 +21,7 @@ import com.example.financialdashboard.api.event.RecursoCriadoEvent;
 import com.example.financialdashboard.api.exceptionhandler.FinancialDashboardExceptionHandler.Erro;
 import com.example.financialdashboard.api.model.Lancamento;
 import com.example.financialdashboard.api.repository.LancamentoRepository;
+import com.example.financialdashboard.api.repository.filter.LancamentoFilter;
 import com.example.financialdashboard.api.service.LancamentoService;
 import com.example.financialdashboard.api.service.exception.PessoaInexistenteOuInativaException;
 
@@ -46,7 +47,7 @@ public class LancamentoResource {
 	private ApplicationEventPublisher publisher;
 	
 	@GetMapping
-	public List<Lancamento> buscar(){
+	public List<Lancamento> pesquisar(LancamentoFilter lancamentoFilter){
 		return this.lancamentoRepository.findAll();
 	}	
 	
