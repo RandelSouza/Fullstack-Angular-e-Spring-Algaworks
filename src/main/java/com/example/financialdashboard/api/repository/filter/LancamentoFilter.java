@@ -35,5 +35,6 @@ public class LancamentoFilter {
 	
 	public void setDataVencimentoAte(LocalDate dataVencimentoAte) {
 		this.dataVencimentoAte = dataVencimentoAte;
-																			}
+	}
+	
 }
